@@ -1,0 +1,1 @@
+export const TEAM_BACKEND = "TEAM_BACKEND"

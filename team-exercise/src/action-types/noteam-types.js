@@ -1,0 +1,2 @@
+export const TEAM_FRONTEND = "TEAM_FRONTEND"
+

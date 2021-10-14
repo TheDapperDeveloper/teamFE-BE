@@ -1,3 +1,5 @@
+//state
+
 import Tim from "../../assets/tim.png";
 import Deanna from "../../assets/deanna.png";
 import Matt from "../../assets/matt.png";
@@ -14,6 +16,8 @@ import Jordan from "../../assets/jordan.png";
 import Jenny from "../../assets/jenny.png";
 import Zak from "../../assets/zak.png";
 import Xavier from "../../assets/xavier.png";
+import { TEAM_FRONTEND } from "../../action-types/noteam-types";
+import { TEAM_BACKEND } from "../../action-types/backend-types";
 
 const initialState = [
   { name: "Tim", image: Tim },
@@ -36,6 +40,10 @@ const initialState = [
 
 const StudentData = (state = initialState, action) => {
   switch (action.type) {
+ case "REMOVE_NOTEAM":
+   const noTeam = state;
+   const noTeamFiltered = noTeam.filter((student) => student.name !== action.payload.name)
+    return noTeamFiltered
     default:
       return state;
   }
